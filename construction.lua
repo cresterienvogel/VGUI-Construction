@@ -71,6 +71,10 @@ function construction.Create(tbl, pan)
             elm:MakePopup()
         end
 
+        if opt.HTML then
+            elm:SetHTML(opt.URL)
+        end
+
         if opt.SetMouseInputEnabled then
             elm:SetMouseInputEnabled(opt.SetMouseInputEnabled)
         end
