@@ -6,7 +6,7 @@ construction.Register("preview_1", {
     {
         VGUI = "DFrame",
         Title = "Construction preview #1",
-        SetDraggable = true, -- now its not draggable by the default
+        SetDraggable = true, -- now its not draggable by the default so you have to do it
         Size = {300, 300},
         Center = true,
         MakePopup = true,
