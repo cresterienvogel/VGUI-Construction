@@ -19,7 +19,7 @@ end
 function construction.Create(tbl, pan)
     tbl = construction.Data[tbl] or tbl
     local elm
-	for _, opt in pairs(tbl) do
+    for _, opt in pairs(tbl) do
         elm = pan and vgui.Create(opt.VGUI, pan) or vgui.Create(opt.VGUI)
         if opt.Name then    
             elm.Name = opt.Name
