@@ -4,7 +4,7 @@ Table-like system to easily draw VGUI
 # Main Params
 * Name - to use later with c_Child, but you will be still able to use number even without it (string)
 * VGUI - VGUI to create: DButton, DFrame .. (string)
-* Children - Children elements to add
+* Children - Children elements to add (tbl)
 
 # Frame Params
 * Title (string)
