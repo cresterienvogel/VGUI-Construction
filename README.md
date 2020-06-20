@@ -6,6 +6,9 @@ Table-like system to easily draw VGUI
 * VGUI - VGUI to create: DButton, DFrame .. (string)
 * Children - Children elements to add (tbl)
 
+# DHTML Params
+* HTML - HTML code to set (string)
+
 # Frame Params
 * Title (string)
 * OnClose (function)
