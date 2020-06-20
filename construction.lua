@@ -39,16 +39,16 @@ function construction.Create(tbl, pan)
             elm:Dock(opt.Dock)
         end
 
-		if opt.DockMargin then
-			elm:DockMargin(unpack(opt.DockMargin))
+        if opt.DockMargin then
+            elm:DockMargin(unpack(opt.DockMargin))
         end
         
         if opt.DockPadding then
-			elm:DockPadding(unpack(opt.DockPadding))
-		end
+            elm:DockPadding(unpack(opt.DockPadding))
+        end
 
-		if opt.Wide then
-			elm:SetWide(opt.Wide)
+        if opt.Wide then
+            elm:SetWide(opt.Wide)
         end
         
 		if opt.Tall then
@@ -56,8 +56,8 @@ function construction.Create(tbl, pan)
         end
 
         if opt.Size then
-			elm:SetSize(unpack(opt.Size))
-		end
+            elm:SetSize(unpack(opt.Size))
+        end
         
         if opt.Center then
             elm:Center()
@@ -91,9 +91,9 @@ function construction.Create(tbl, pan)
             elm:SetSizable(opt.SetSizable)
         end
 
-		if opt.Text then
-			elm:SetText(opt.Text)
-		end
+        if opt.Text then
+            elm:SetText(opt.Text)
+        end
 
         if opt.Font then
             elm:SetFont(opt.Font)
@@ -111,19 +111,19 @@ function construction.Create(tbl, pan)
             elm.OnClose = opt.OnClose
         end
 
-		if opt.Paint then
-			elm.Paint = opt.Paint
-		end
+        if opt.Paint then
+            elm.Paint = opt.Paint
+        end
 
-		if opt.DoClick then
-			elm.DoClick = opt.DoClick
+        if opt.DoClick then
+            elm.DoClick = opt.DoClick
         end
 
         if opt.Children then
             elm.children = elm.children or {}
             local child = construction.Create(opt.Children, elm)
             elm.children[#elm.children + 1] = child
-		end
+        end
     end
     return elm
 end
