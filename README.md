@@ -9,7 +9,7 @@ Table-like system to easily draw VGUI
 # DHTML Params
 * HTML - HTML code to set (string)
 
-# Frame Params
+# DFrame Params
 * Title (string)
 * OnClose (function)
 * SetSizable (bool)
@@ -17,7 +17,7 @@ Table-like system to easily draw VGUI
 * ShowCloseButton (bool)
 * SetDraggable (bool)
 
-# Button, DLabel .. Params
+# DButton, DLabel .. Params
 * Text (string)
 * Color (color tbl)
 * Font (string)
