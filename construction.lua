@@ -51,8 +51,8 @@ function construction.Create(tbl, pan)
             elm:SetWide(opt.Wide)
         end
         
-		if opt.Tall then
-			elm:SetTall(opt.Tall)
+        if opt.Tall then
+            elm:SetTall(opt.Tall)
         end
 
         if opt.Size then
