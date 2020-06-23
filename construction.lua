@@ -86,6 +86,10 @@ function construction.Create(tbl, pan)
         if opt.SetDraggable then
             elm:SetDraggable(opt.SetDraggable)
         end
+        
+        if opt.SetExpensiveShadow then
+            elm:SetExpensiveShadow(unpack(opt.SetExpensiveShadow))
+        end
 
         if opt.ShowCloseButton then
             elm:ShowCloseButton(opt.ShowCloseButton)
