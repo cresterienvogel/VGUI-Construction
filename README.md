@@ -34,3 +34,4 @@ Table-like system to easily draw VGUI
 * Center (bool)
 * Paint (function)
 * OnRemove (function)
+* SetExpensiveShadow (tbl)
