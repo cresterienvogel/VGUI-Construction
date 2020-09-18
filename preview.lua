@@ -1,5 +1,5 @@
 construction.Register("preview", {
-	[1] = {
+	{
 		type = "DFrame",
 		init = function(pnl)
 			pnl:SetTitle("TEST FRAME")
@@ -8,28 +8,28 @@ construction.Register("preview", {
 			pnl:MakePopup()
 		end,
 		children = {
-			[1] = {
+			{
 				type = "DButton",
 				init = function(pnl)
 					pnl:Dock(LEFT)
 					pnl:SetText("LEFT")
 				end
 			},
-			[2] = {
+			{
 				type = "DButton",
 				init = function(pnl)
 					pnl:Dock(RIGHT)
 					pnl:SetText("RIGHT")
 				end
 			},
-			[3] = {
+			{
 				type = "DPanel",
 				init = function(pnl)
 					pnl:Dock(FILL)
 					pnl.fortest = "FOR TEST"
 				end,
 				children = {
-					[1] = {
+					{
 						type = "DButton",
 						init = function(pnl, parent)
 							pnl:SetText("CENTER, PARENT IS " .. parent.fortest)
