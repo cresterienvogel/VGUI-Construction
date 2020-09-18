@@ -1,72 +1,49 @@
---[[
-    Preview 1
-]]
-
-construction.Register("preview_1", {
-    {
-        VGUI = "DFrame",
-        Title = "Construction preview #1",
-        SetDraggable = true, -- now its not draggable by the default so you have to do it
-        Size = {300, 300},
-        Center = true,
-        MakePopup = true,
-        Children = {
-            {
-                VGUI = "DButton",
-                Text = "That does nothing",
-                Dock = FILL,
-                DoClick = function()
-                    print("ok a bit more of nothing")
-                end
-            }
-        }
-    }
+construction.Register("preview", {
+	[1] = {
+		type = "DFrame",
+		init = function(pnl)
+			pnl:SetTitle("TEST FRAME")
+			pnl:SetSize(300, 300)
+			pnl:Center()
+			pnl:MakePopup()
+		end,
+		children = {
+			[1] = {
+				type = "DButton",
+				init = function(pnl)
+					pnl:Dock(LEFT)
+					pnl:SetText("LEFT")
+				end
+			},
+			[2] = {
+				type = "DButton",
+				init = function(pnl)
+					pnl:Dock(RIGHT)
+					pnl:SetText("RIGHT")
+				end
+			},
+			[3] = {
+				type = "DPanel",
+				init = function(pnl)
+					pnl:Dock(FILL)
+					pnl.fortest = "FOR TEST"
+				end,
+				children = {
+					[1] = {
+						type = "DButton",
+						init = function(pnl, parent)
+							pnl:SetText("CENTER, PARENT IS " .. parent.fortest)
+							pnl:Dock(FILL)
+						end
+					}
+				}
+			}
+		}
+	}
 })
 
-concommand.Add("preview_1", function()
-    construction.Create("preview_1")
-end)
-
---[[
-    Preview 2
-]]
-
--- main panel
-construction.Register("preview_2", {
-    {
-        VGUI = "DFrame",
-        Title = "Construction preview #2",
-        Size = {300, 500},
-        Center = true,
-        MakePopup = true,
-        Children = {
-            {
-                Name = "scrollPnl",
-                VGUI = "DScrollPanel",
-                Dock = FILL
-            }
-        }
-    }
-})
-
--- button
-construction.Register("preview_2_helper", {
-    {
-        VGUI = "DButton",
-        Text = "Preview button",
-        Dock = TOP,
-        DockMargin = {4, 4, 4, 4}
-    }
-})
-
-concommand.Add("preview_2", function()
-    local fr = construction.Create("preview_2")
-    for i = 1, 10 do
-        local btn = construction.Create("preview_2_helper", c_Child(fr, "scrollPnl")) 
-        -- we also could use number 1 in c_Child because scroll panel is the first
-
-        if math.random(1, 2) == 2 then
-            btn:SetText("changed")
-        end
-    end
+concommand.Add("construction_preview", function()
+    local fr = construction.Create("preview")
+    fr:SetSize(fr:GetWide() * 2, fr:GetTall() * 2)
+    fr:Center()
 end)
