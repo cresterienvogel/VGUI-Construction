@@ -2,4 +2,4 @@
 Table-like system to easily draw VGUI
 
 # How to use
-Check an example in the preview file.
+Check different examples in the preview folder.
